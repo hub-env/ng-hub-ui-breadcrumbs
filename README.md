@@ -14,6 +14,7 @@ This package is part of [Hub UI](https://hubui.dev/en/), a collection of Angular
 - Docs: https://hubui.dev/en/breadcrumbs/overview/
 - Live examples: https://hubui.dev/en/breadcrumbs/examples/
 - Hub UI: https://hubui.dev/en/
+- Hub UI on GitHub (issues, roadmap and contributing): https://github.com/hub-env/hub-ui
 
 ## 🧩 Library Family `ng-hub-ui`
 
@@ -584,7 +585,7 @@ We appreciate your interest in contributing to Hub Breadcrumb! Here's how you ca
 1.  **Clone the repository**
 
     ```bash
-    git clone https://github.com/carlos-morcillo/ng-hub-ui-breadcrumbs.git
+    git clone https://github.com/hub-env/ng-hub-ui-breadcrumbs.git
     cd ng-hub-ui-breadcrumbs
     ```
 
@@ -626,7 +627,7 @@ If you find this project helpful and would like to support its development, you 
 
 Your support is greatly appreciated and helps maintain and improve this project!
 
-For bugs and feature requests, please open an issue at https://github.com/carlos-morcillo/ng-hub-ui-breadcrumbs/issues.
+For bugs and feature requests, please open an issue at https://github.com/hub-env/hub-ui/issues.
 
 ## License
 

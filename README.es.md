@@ -14,6 +14,7 @@ Este paquete forma parte de [Hub UI](https://hubui.dev/en/), una colección de b
 - Documentación: https://hubui.dev/en/breadcrumbs/overview/
 - Ejemplos en vivo: https://hubui.dev/en/breadcrumbs/examples/
 - Hub UI: https://hubui.dev/en/
+- Hub UI en GitHub (incidencias, roadmap y cómo contribuir): https://github.com/hub-env/hub-ui
 
 ## 🧩 Familia de bibliotecas `ng-hub-ui`
 
@@ -588,7 +589,7 @@ La última versión es la **v22.7.1**, que declara el peer opcional `ng-hub-ui-d
 1.  **Clona el repositorio**
 
     ```bash
-    git clone https://github.com/carlos-morcillo/ng-hub-ui-breadcrumbs.git
+    git clone https://github.com/hub-env/ng-hub-ui-breadcrumbs.git
     cd ng-hub-ui-breadcrumbs
     ```
 
@@ -630,7 +631,7 @@ Si este proyecto te resulta útil y quieres apoyar su desarrollo, puedes invitar
 
 ¡Tu apoyo es muy apreciado y ayuda a mantener y mejorar este proyecto!
 
-Para errores y peticiones de funcionalidades, abre una incidencia en https://github.com/carlos-morcillo/ng-hub-ui-breadcrumbs/issues.
+Para errores y peticiones de funcionalidades, abre una incidencia en https://github.com/hub-env/hub-ui/issues.
 
 ## Licencia
 
