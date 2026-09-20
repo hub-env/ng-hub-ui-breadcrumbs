@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [22.7.3] - 2026-09-20
+
+### Changed
+
+- The npm keywords declare `ng-hub-ui` and `hub-ui`, the family names, and add `router`,
+  `ui-component`, `angular-library`, `standalone` and `accessibility`. Metadata only: no code,
+  types or styles change.
+
 ## [22.7.2] - 2026-09-16
 
 ### Changed
