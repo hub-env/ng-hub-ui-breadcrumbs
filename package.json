@@ -11,7 +11,14 @@
 		"navigation",
 		"routing",
 		"component",
-		"typescript"
+		"typescript",
+		"ng-hub-ui",
+		"hub-ui",
+		"router",
+		"ui-component",
+		"angular-library",
+		"standalone",
+		"accessibility"
 	],
 	"author": "Carlos Morcillo <carlos.morcillo@me.com> (https://www.carlosmorcillo.com)",
 	"license": "MIT",
