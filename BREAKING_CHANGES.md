@@ -4,6 +4,20 @@ Every release of `ng-hub-ui-breadcrumbs` that asks something of a consumer, newe
 major tracks the Angular major this library targets, so a breaking change ships inside a minor
 and this file is the notice semver cannot give.
 
+## [22.8.0] - 2026-09-21
+### The Angular floor moves to 19 and `@angular/router` becomes a declared peer
+
+- **Change**: `@angular/common` and `@angular/core` now ask for `>=19.0.0` instead of `>=18.0.0`,
+  and `@angular/router` joins them at the same floor.
+- **Impact**: neither is a loss of support, because neither case ever worked. The component uses
+  `linkedSignal`, which Angular 18 does not ship, so an 18 project installed the package and then
+  failed to compile; and the router was always required, only undeclared, so a project without it
+  failed at injection instead of at install. What changes is when you find out: npm now says so.
+- **Migration**: none for a project on Angular 19 or later that already routes. A project on
+  Angular 18 stays on `22.7.3`, which is no worse off than it was. A project with no router
+  cannot use this library at all — pass `items` yourself and the router import still has to
+  resolve, so add `@angular/router` or drop the package.
+
 ## [22.7.0] - 2026-09-07
 ### A `hubBreadcrumbItem` template renders inside a `span.hub-breadcrumb__custom`
 

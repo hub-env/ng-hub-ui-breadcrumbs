@@ -1,6 +1,6 @@
 {
 	"name": "ng-hub-ui-breadcrumbs",
-	"version": "22.7.3",
+	"version": "22.8.0",
 	"description": "A flexible and reusable breadcrumb component for Angular applications that automatically generates breadcrumbs based on routing configuration",
 	"keywords": [
 		"angular",
@@ -31,8 +31,9 @@
 	},
 	"homepage": "https://hubui.dev/en/breadcrumbs/overview/",
 	"peerDependencies": {
-		"@angular/common": ">=18.0.0",
-		"@angular/core": ">=18.0.0",
+		"@angular/common": ">=19.0.0",
+		"@angular/core": ">=19.0.0",
+		"@angular/router": ">=19.0.0",
 		"ng-hub-ui-ds": ">=22.0.0"
 	},
 	"peerDependenciesMeta": {

@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [22.8.0] - 2026-09-21
+
+### Changed
+
+- **The declared Angular floor is now 19, which is the one the code can actually run on.** The
+  manifest asked for `>=18.0.0` while the component builds its expanded state with
+  `linkedSignal`, introduced in Angular 19, so an install on 18 resolved without a warning and
+  then failed to compile. The range now says what is true.
+- **`@angular/router` is declared as a peer dependency.** The service injects `Router` and
+  `ActivatedRoute` and the crumbs render as `routerLink`, so the router was always required; it
+  was simply missing from the manifest, which left npm with nothing to warn about.
+
 ## [22.7.3] - 2026-09-20
 
 ### Changed
