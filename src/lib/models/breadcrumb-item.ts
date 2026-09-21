@@ -5,10 +5,16 @@
  * `routerLink`. The optional anchor fields take over when the crumb's canonical
  * destination is not an Angular route — a section still served by a legacy app,
  * another domain, or a file meant to be saved rather than opened.
+ *
+ * A crumb with neither `url` nor `href` renders as plain text, like the last one
+ * always does. Some levels of a trail name a grouping rather than a page —
+ * `Settings` above three settings screens, a tenant above its projects — and
+ * pointing them at a route that does not exist is worse than not linking them.
  */
 export interface BreadcrumbItem {
 	label: string;
-	url: string;
+	/** In-app destination handed to `routerLink`. Omit it for a level with no page of its own. */
+	url?: string;
 	data?: any;
 	/** External destination. When present the crumb renders a plain anchor, not a `routerLink`. */
 	href?: string;

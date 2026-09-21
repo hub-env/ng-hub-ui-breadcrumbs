@@ -345,9 +345,9 @@ Either declare it on the route:
 ```ts
 readonly trail: BreadcrumbItem[] = [
   { label: 'Example.com', url: '/', href: 'https://example.com', target: '_blank' },
-  { label: 'Handbook', url: '/handbook', href: '/assets/handbook.pdf', download: 'handbook.pdf' },
+  { label: 'Handbook', href: '/assets/handbook.pdf', download: 'handbook.pdf' },
   { label: 'Docs', url: '/docs' },
-  { label: 'Breadcrumbs', url: '/docs/breadcrumbs' }
+  { label: 'Breadcrumbs' }
 ];
 ```
 
@@ -448,7 +448,7 @@ Replacing the service (a test double, a facade over another source) means publis
 | Property   | Type     | Description                                                                                              |
 | ---------- | -------- | -------------------------------------------------------------------------------------------------------- |
 | `label`    | `string` | The resolved text to display for the breadcrumb.                                                         |
-| `url`      | `string` | The in-app destination, handed to `routerLink`.                                                          |
+| `url`      | `string` | Optional. The in-app destination, handed to `routerLink`. A crumb with no `url` and no `href` renders as plain text. |
 | `data`     | `any`    | Optional. The original route data object (useful for icons, etc.).                                       |
 | `href`     | `string` | Optional. External destination. When present the crumb renders a plain anchor instead of a `routerLink`. |
 | `target`   | `string` | Optional. Anchor `target` (e.g. `_blank`). Only meaningful alongside `href`.                             |

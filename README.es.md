@@ -450,7 +450,7 @@ Sustituir el servicio (un doble de test, una fachada sobre otra fuente) implica 
 | Propiedad  | Tipo     | Descripción                                                                                                    |
 | ---------- | -------- | -------------------------------------------------------------------------------------------------------------- |
 | `label`    | `string` | El texto resuelto que se muestra para el breadcrumb.                                                           |
-| `url`      | `string` | El destino dentro de la aplicación, que se pasa a `routerLink`.                                                |
+| `url`      | `string` | Opcional. El destino dentro de la aplicación, que se pasa a `routerLink`. Una miga sin `url` ni `href` se dibuja como texto. |
 | `data`     | `any`    | Opcional. El objeto data original de la ruta (útil para iconos, etc.).                                         |
 | `href`     | `string` | Opcional. Destino externo. Si está presente, la miga se renderiza como enlace simple en lugar de `routerLink`. |
 | `target`   | `string` | Opcional. `target` del enlace (p. ej. `_blank`). Solo tiene sentido junto a `href`.                            |

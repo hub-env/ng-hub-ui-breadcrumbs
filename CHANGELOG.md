@@ -2,7 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
-## [22.8.0] - 2026-09-21
+## [22.9.0] - 2026-09-21
+
+### Added
+
+- **A crumb can have no destination.** `url` is optional, and a crumb declaring neither `url` nor
+  `href` renders as plain text, the way the last crumb always has. Some levels of a trail name a
+  grouping rather than a page — `Settings` above three settings screens, a tenant above its
+  projects — and until now they had to be pointed at a route that does not exist, which is a link
+  to a 404 for the reader and a crawl for every search engine that finds it.
+
+
 
 ### Changed
 

@@ -4,7 +4,19 @@ Every release of `ng-hub-ui-breadcrumbs` that asks something of a consumer, newe
 major tracks the Angular major this library targets, so a breaking change ships inside a minor
 and this file is the notice semver cannot give.
 
-## [22.8.0] - 2026-09-21
+## [22.9.0] - 2026-09-21
+### `BreadcrumbItem.url` is optional
+
+- **Change**: `url` was `string` and is now `string | undefined`. Nothing about an item that
+  declares it changes; what changes is that the type no longer promises it is there.
+- **Impact**: code that reads the field without checking — `item.url.startsWith('/')`, a function
+  typed `(url: string) => …` fed straight from a crumb — stops compiling under `strictNullChecks`.
+  Templates are unaffected, and so is every item built by the library's own service, which always
+  sets a url.
+- **Migration**: narrow before using it (`item.url ? … : …`), or assert it where you know your own
+  data always carries one.
+
+
 ### The Angular floor moves to 19 and `@angular/router` becomes a declared peer
 
 - **Change**: `@angular/common` and `@angular/core` now ask for `>=19.0.0` instead of `>=18.0.0`,
