@@ -4,7 +4,20 @@ Every release of `ng-hub-ui-breadcrumbs` that asks something of a consumer, newe
 major tracks the Angular major this library targets, so a breaking change ships inside a minor
 and this file is the notice semver cannot give.
 
+## [22.10.0] - 2026-09-23
+
+### Angular below 17.3.0 is no longer supported
+
+- **Change**: the `@angular/*` peer ranges move from `>=17.2.0` to `>=17.3.0`.
+
+- **Why**: Its published `.d.ts` names `InputSignalWithTransform` or `OutputEmitterRef`, which Angular did not ship until 17.3.
+
+- **Impact — an application below 17.3.0 gets a peer warning where it used to get a build error.**
+  Nothing that worked stops working: those versions never compiled against this package. Upgrade
+  Angular to 17.3.0 or stay on the previous release.
+
 ## [22.9.0] - 2026-09-21
+
 ### `BreadcrumbItem.url` is optional
 
 - **Change**: `url` was `string` and is now `string | undefined`. Nothing about an item that
@@ -15,7 +28,6 @@ and this file is the notice semver cannot give.
   sets a url.
 - **Migration**: narrow before using it (`item.url ? … : …`), or assert it where you know your own
   data always carries one.
-
 
 ### The Angular floor moves to 19 and `@angular/router` becomes a declared peer
 
@@ -31,6 +43,7 @@ and this file is the notice semver cannot give.
   resolve, so add `@angular/router` or drop the package.
 
 ## [22.7.0] - 2026-09-07
+
 ### A `hubBreadcrumbItem` template renders inside a `span.hub-breadcrumb__custom`
 
 - **Change**: the component now wraps the projected content of a custom item template in a
@@ -46,6 +59,7 @@ and this file is the notice semver cannot give.
   applied twice.
 
 ## [22.6.0] - 2026-09-06
+
 ### `HubBreadcrumbComponent.breadcrumbs$` is gone
 
 - **Change**: the component no longer re-exports the service's Observable. It reads the new
@@ -64,7 +78,6 @@ and this file is the notice semver cannot give.
 - **Migration**: publish the trail as a signal, e.g. `readonly breadcrumbs = signal<BreadcrumbItem[]>([])`
   (or `toSignal(yourStream, { initialValue: [] })`). Keeping `breadcrumbs$` alongside it is optional.
 
-
 ### Announced: `HubBreadcrumbsModule` is removed in 23.0.0
 
 - **Change**: the class is now marked `@deprecated`. Nothing is removed here and nothing changes at
@@ -75,15 +88,15 @@ and this file is the notice semver cannot give.
 - **Migration**: import the two standalone declarables the module re-exported. `HubBreadcrumbsService`
   is `providedIn: 'root'` and never travelled through the module, so nothing else moves.
 
-  ```ts
-  // Before
-  @NgModule({ imports: [HubBreadcrumbsModule] })
-  export class AppModule {}
+    ```ts
+    // Before
+    @NgModule({ imports: [HubBreadcrumbsModule] })
+    export class AppModule {}
 
-  // After
-  @Component({ imports: [HubBreadcrumbComponent, HubBreadcrumbItemDirective] })
-  export class ShellComponent {}
-  ```
+    // After
+    @Component({ imports: [HubBreadcrumbComponent, HubBreadcrumbItemDirective] })
+    export class ShellComponent {}
+    ```
 
 ## [22.4.0] - 2026-07-07
 
@@ -102,12 +115,14 @@ Structural changes to improve consistency across the `ng-hub-ui` library family.
 The main component has been renamed for better alignment with Angular best practices and other components in the library.
 
 #### Breadcrumb Component
+
 - **Old Selector**: `hub-breadcrumbs`
 - **New Selector**: `hub-breadcrumb`
 - **Old Class**: `HubBreadcrumbsComponent`
 - **New Class**: `HubBreadcrumbComponent`
 
 **Migration Steps:**
+
 1. Update your templates to use `<hub-breadcrumb>` instead of `<hub-breadcrumbs>`.
 2. Update your TypeScript imports to use `HubBreadcrumbComponent`.
 
@@ -116,6 +131,7 @@ The main component has been renamed for better alignment with Angular best pract
 Starting from v21.1.0, the component styles are automatically included when you use the component.
 
 #### CSS/SCSS Imports
+
 - **Change**: You no longer need to manually import `ng-hub-ui-breadcrumbs/styles/breadcrumbs.scss` or similar in your global styles.
 - **Migration Steps**: Remove any manual imports of the breadcrumb styles from your `styles.scss` or `angular.json`.
 

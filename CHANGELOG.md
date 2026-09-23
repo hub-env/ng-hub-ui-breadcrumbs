@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## [22.10.0] - 2026-09-23
+
+### Changed
+
+- **BREAKING — the Angular floor rises from `17.2.0` to `17.3.0`.** The old range was
+  measured from the source alone, and its published `.d.ts` names `InputSignalWithTransform` or `OutputEmitterRef`, which Angular did not ship until 17.3. An application below the new floor could install this
+  package and then fail to build, with an error that pointed at Angular rather than here; it now
+  gets the peer warning it should always have had. Nothing that worked stops working. See
+  `BREAKING_CHANGES.md`.
+- **The floor is proved by running it now, not only derived.** `npm run floors:matrix` builds a real
+  project pinned to the oldest Angular this package claims, installs it there, typechecks the
+  published types against that version's `@angular/*` and runs that version's linker over the
+  compiled output. It is what found this.
+
 ## [22.9.1] - 2026-09-23
 
 ### Changed
@@ -25,8 +39,6 @@ All notable changes to this project will be documented in this file.
   grouping rather than a page — `Settings` above three settings screens, a tenant above its
   projects — and until now they had to be pointed at a route that does not exist, which is a link
   to a 404 for the reader and a crawl for every search engine that finds it.
-
-
 
 ### Changed
 
@@ -102,7 +114,7 @@ All notable changes to this project will be documented in this file.
 ### Changed
 
 - **`HubBreadcrumbComponent` no longer re-exports `breadcrumbs$`.** The component carried the
-  service's Observable as a public field *and* a signal derived from it, so one trail had two
+  service's Observable as a public field _and_ a signal derived from it, so one trail had two
   public surfaces on the same class and neither was the one the template rendered. It now reads
   `HubBreadcrumbsService.breadcrumbs` directly. Anyone who was reading the field can inject the
   service — that is where the trail was coming from anyway — and anyone substituting the service
