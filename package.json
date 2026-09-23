@@ -1,6 +1,6 @@
 {
 	"name": "ng-hub-ui-breadcrumbs",
-	"version": "22.9.0",
+	"version": "22.9.1",
 	"description": "A flexible and reusable breadcrumb component for Angular applications that automatically generates breadcrumbs based on routing configuration",
 	"keywords": [
 		"angular",
@@ -20,7 +20,7 @@
 		"standalone",
 		"accessibility"
 	],
-	"author": "Carlos Morcillo Fernández <carlos.morcillo@me.com> (https://www.carlosmorcillo.com)",
+	"author": "Carlos Morcillo Fern\u00e1ndez <carlos.morcillo@me.com> (https://www.carlosmorcillo.com)",
 	"license": "MIT",
 	"repository": {
 		"type": "git",
@@ -31,9 +31,9 @@
 	},
 	"homepage": "https://hubui.dev/en/breadcrumbs/overview/",
 	"peerDependencies": {
-		"@angular/common": ">=19.0.0",
-		"@angular/core": ">=19.0.0",
-		"@angular/router": ">=19.0.0",
+		"@angular/common": ">=17.2.0",
+		"@angular/core": ">=17.2.0",
+		"@angular/router": ">=17.2.0",
 		"ng-hub-ui-ds": ">=22.0.0"
 	},
 	"peerDependenciesMeta": {
